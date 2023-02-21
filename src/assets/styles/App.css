@@ -1,0 +1,20 @@
+html
+{
+    background-color: white;
+}
+
+body
+{
+    margin: 0px;
+}
+
+*
+{
+    box-sizing: border-box;
+
+}
+
+button:hover
+{
+    cursor: pointer;
+}
