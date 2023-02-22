@@ -1,8 +1,10 @@
+import FormSignup from "../components/molecules/FormSignup";
+
 function SignUp() {
     return ( 
-        <>
-            <h1>Sign up</h1>
-        </>
+        <div className="div-signup">
+            <FormSignup></FormSignup>
+        </div>
      );
 }
 

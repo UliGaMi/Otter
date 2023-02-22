@@ -1,8 +1,10 @@
+import FormLogin from "../components/molecules/FormLogin";
+
 function Login() {
     return (  
-        <>
-            <h1>Log in</h1>
-        </>
+        <div className="div-login">
+            <FormLogin></FormLogin>
+        </div>
     );
 }
 
