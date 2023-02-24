@@ -18,21 +18,21 @@ function FormSignup() {
             <Logo clase={'img-form'}></Logo>
             <form ref={form}>
                 <div>
-            <label htmlFor="name">Nombre:</label>
+            <label htmlFor="name">Nombre</label>
             <input id="name" name='nombre' type="text" />
             </div>
             <div>
-            <label htmlFor="email">Correo:</label>
+            <label htmlFor="email">Correo electrónico</label>
             <input id="email" name='correo' type="email" />
             </div>
             <div>
-            <label htmlFor="password">Contraseña:</label>
+            <label htmlFor="password">Contraseña</label>
             <input id="password" name='contraseña' type="password" />
             </div>
 
             <button onClick={handlerClick}>Registrarse</button>
             </form>
-            <Link to={'/login'}>¿Ya tienes cuenta? Inicia sesión aquí</Link>
+            <Link className='link-form' to={'/login'}>¿Ya tienes cuenta? Inicia sesión aquí</Link>
         </div>
         </div>
      );

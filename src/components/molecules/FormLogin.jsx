@@ -1,14 +1,17 @@
-import {useRef} from 'react';
+import {useRef, useContext} from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import UserContext from "../../contexts/userContext";
 import Logo from '../atoms/Logo'
 import "../../assets/styles/Form.css"
 
 function FormLogin() {
+    const navigate = useNavigate();
     const form = useRef();
+    const {isLoged, setIsLoged} = useContext(UserContext);
     const handlerClick = (e) => {
         e.preventDefault();
-        const formData = new FormData(form.current);
-        alert(formData.get('correo') + formData.get('contraseña'));
+        setIsLoged(true);
+        navigate('/perfil')
     }
 
     return ( 
@@ -17,11 +20,11 @@ function FormLogin() {
             <Logo clase={"img-form"}></Logo>
                 <form ref={form}>
                 <div>
-                <label htmlFor="email">Correo:</label>
+                <label htmlFor="email">Correo electrónico</label>
                 <input id="email" name='correo' type="email" />
                 </div>
                 <div>
-                <label htmlFor="password">Contraseña:</label>
+                <label htmlFor="password">Contraseña</label>
                 <input id="password" name='contraseña' type="password" />
                 </div>
                 <button onClick={handlerClick}>Iniciar sesión</button>
