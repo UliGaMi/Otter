@@ -24,7 +24,7 @@ function DropDown() {
             <li key={item.id}>
               <button key={item.id} onClick={()=>{
                 setMenu(false);
-                navigate(`${item.url}`)
+                navigate(`${item.url}`);
               }}>{item.nombre}</button>
             </li>
           );
@@ -36,6 +36,7 @@ function DropDown() {
                 <button key={item.id}
                   onClick={() => {
                     setIsLoged(false);
+                    setMenu(false);
                     navigate(`${item.url}`);
                   }}>{item.nombre}</button>
               </li>
