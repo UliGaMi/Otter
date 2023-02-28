@@ -1,0 +1,15 @@
+.ul-dropdown
+{
+    flex-direction: column;
+    width: 15vw;
+    background-color: black;
+    position: absolute;
+    transform: translate(85vw);
+}
+
+.ul-dropdown li{
+
+    text-decoration: none;
+    list-style: none;
+
+}

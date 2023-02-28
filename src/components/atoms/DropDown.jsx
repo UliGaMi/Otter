@@ -3,6 +3,7 @@ import UserContext from "../../contexts/userContext";
 import MenuContext from "../../contexts/menuContext";
 import EnlacesContext from "../../contexts/enlacesContext";
 import { useNavigate } from "react-router-dom";
+import '../../assets/styles/DropDown.css'
 
 function DropDown() {
   
@@ -12,11 +13,20 @@ function DropDown() {
   const {enlaces} = useContext(EnlacesContext);
 
   useEffect(() => {
-    alert(menu);
+    const menuD = document.getElementById("menu");
+    if(menu)
+    {
+      menuD.style.display= "flex";
+    }
+    else
+    {
+      menuD.style.display = "none";
+    }
+    //alert(menu);
   },[menu])
 
   return (
-    <ul>
+    <ul id="menu" className="ul-dropdown">
       {
         enlaces.map(item => {
         if(item.isLoged === isLoged && item.nombre !== 'Cerrar sesión'){
