@@ -1,0 +1,42 @@
+import { useRef, useContext } from "react";
+import LabelInput from "../atoms/LabelInput";
+import ButtonForm from "../atoms/ButtonForm";
+function FormConfig({ nutriologo }) {
+  const form = useRef();
+  const handlerClick = (e) => {
+    e.preventDefault();
+    const formData = new FormData(form.current);
+    if (formData.get("contrasenia") === formData.get("contrasenia2")) {
+      let uri = `http://35.172.101.131:3000/nutriologos/${nutriologo._id}`;
+      let options = {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          contrasenia: formData.get("contrasenia"),
+        }),
+      };
+
+      fetch(uri, options)
+        .then((response) => response.json())
+        .then((data) => {
+          alert(data.message);
+        });
+    } else {
+      alert("Las contraseñas no coinciden");
+    }
+  }
+  return (
+    <div className="div-formconfig">
+      <form ref={form}>
+        <h1>Cambia tu contraseña</h1>
+        <LabelInput name={"contrasenia"} type={"password"} label="Contraseña" id={"password1"}></LabelInput>
+        <LabelInput name={"contrasenia2"} type={"password"} label="Confirma la contraseña" id={"password2"}></LabelInput>
+        <ButtonForm handler={handlerClick} label={"Cambiar Contraseña"}></ButtonForm>
+      </form>
+    </div>
+  );
+}
+
+export default FormConfig;

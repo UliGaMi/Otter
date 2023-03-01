@@ -28,10 +28,10 @@ function LandingPage() {
  
 
             <footer>
-            <div class="div-info">
+            <div className="div-info">
                 <p>Sobre Nosotros</p>
             </div>
-            <div class="div-social">
+            <div className="div-social">
                 <img src={social}/>
             </div>
             </footer>
