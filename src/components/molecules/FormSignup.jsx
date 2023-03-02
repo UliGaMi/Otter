@@ -11,7 +11,7 @@ function FormSignup() {
   const handlerClick = (e) => {
     e.preventDefault();
     const formData = new FormData(form.current);
-    let uri = "http://35.172.101.131:3000/nutriologos";
+    let uri = "https://otter.iothings.com.mx:3000/nutriologos";
     let options = {
       method: "POST",
       headers: {

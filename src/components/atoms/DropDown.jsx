@@ -22,7 +22,6 @@ function DropDown() {
     {
       menuD.style.display = "none";
     }
-    //alert(menu);
   },[menu])
 
   return (

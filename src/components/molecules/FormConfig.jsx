@@ -7,7 +7,7 @@ function FormConfig({ nutriologo }) {
     e.preventDefault();
     const formData = new FormData(form.current);
     if (formData.get("contrasenia") === formData.get("contrasenia2")) {
-      let uri = `http://35.172.101.131:3000/nutriologos/${nutriologo._id}`;
+      let uri = `https://otter.iothings.com.mx:3000/nutriologos/${nutriologo._id}`;
       let options = {
         method: "PUT",
         headers: {

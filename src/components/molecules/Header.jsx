@@ -25,7 +25,8 @@ function Header() {
         }}/>
         </div>
     </div>
-        <DropDown></DropDown>
+    <DropDown></DropDown>
+        
 
     </>
      );

@@ -1,15 +1,37 @@
 .ul-dropdown
 {
     flex-direction: column;
+    justify-content: space-evenly;
     width: 15vw;
-    background-color: black;
+    height: 20vh;
+    background-color: #EEECCA;
     position: absolute;
-    transform: translate(85vw);
+    right: 0%;
+    border-bottom-left-radius: 1rem;
+    border: 2px green  solid;
 }
 
 .ul-dropdown li{
 
-    text-decoration: none;
     list-style: none;
+    width: 100%;
 
+}
+
+.ul-dropdown button{
+
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    height: 5vh;
+
+    font-weight: 700;
+    font-size: medium;
+}
+
+
+.ul-dropdown li :hover{
+
+    border: 2px green;
+    background-color: #84B053;
 }
