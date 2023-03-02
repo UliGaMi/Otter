@@ -1,6 +1,7 @@
 import {useRef} from 'react';
 import LabelInput from '../atoms/LabelInput';
 import ButtonForm from '../atoms/ButtonForm';
+import "../../assets/styles/FormPaciente.css"
 
 function FormPaciente({nutriologo}) {
     const form = useRef();
@@ -31,24 +32,26 @@ function FormPaciente({nutriologo}) {
           });
       }
     return ( 
-        <div className="div-formpaciente">
-
-            
+      <div className="div-formpaciente">
             <form ref={form}>
-            <h1>Registrar Paciente</h1>
+            <h1 className='formHeader'>Registrar Paciente</h1>
             <LabelInput name={"nombre"} type={"text"} label="Nombre completo" id={"name"}></LabelInput>
+            <div className='div-smallInputsContainer'>
+            <div className='form-first-smallInputs'>
             <LabelInput name={"nacimiento"} type={"date"} label="Fecha de nacimiento" id={"birthday"}></LabelInput>
             <LabelInput name={"peso"} type={"number"} label="Peso" id={"weight"}></LabelInput>
+            </div>
+            <div className='form-second-smallInputs'>
             <LabelInput name={"altura"} type={"number"} label="Altura" id={"height"}></LabelInput>
+            <label>Sexo</label>
             <select name="sexo">
                 <option value="M">Masculino</option>
                 <option value="F">Femenino</option>
             </select>
+            </div>
+            </div>
             <ButtonForm handler={handlerClick} label="Registrar paciente" ></ButtonForm>
-
-                
             </form>
-
         </div>
      );
 }

@@ -1,0 +1,51 @@
+.div-formpaciente{
+    display: flex;
+    width: 80vw;
+    justify-content: center;
+    align-items:center;
+}
+
+form{
+    width: 50%;
+}
+
+.formHeader{
+    margin-bottom: 5rem;
+}
+
+.labelInput{
+    display: flex;
+    margin-bottom: 2rem;
+    flex-direction: column;
+
+
+}
+
+.labelInput input{
+    height: 2em;
+}
+
+.form-first-smallInputs{
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+
+}
+
+.form-second-smallInputs{
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+
+}
+
+.form-second-smallInputs select{
+ 
+    height: 2em;
+}
+
+.div-smallInputsContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
