@@ -6,7 +6,7 @@ import "../../assets/styles/Aside.css"
 function Aside() {
     return ( 
         <aside className="aside-display">
-            <ButtonAside img={historial} label="Historial de pacientes" url={"/nuevopaciente"}></ButtonAside>
+            <ButtonAside img={historial} label="Historial de pacientes" url={"/historiales"}></ButtonAside>
             <ButtonAside img={paciente} label="Nuevo Paciente" url={"/nuevopaciente"}></ButtonAside>
             <ButtonAside img={tabla} label="Tablas nutricionales" url={"/nuevopaciente"}></ButtonAside>
         </aside>

@@ -17,7 +17,6 @@ function FormPaciente({nutriologo}) {
           body: JSON.stringify({
             id_nutriologo: nutriologo._id,
             nombre: formData.get("nombre"),
-            peso: formData.get("peso"),
             nacimiento: formData.get("nacimiento"),
             altura: formData.get("altura"),
             genero: formData.get("sexo")
@@ -39,7 +38,6 @@ function FormPaciente({nutriologo}) {
             <div className='div-smallInputsContainer'>
             <div className='form-first-smallInputs'>
             <LabelInput name={"nacimiento"} type={"date"} label="Fecha de nacimiento" id={"birthday"}></LabelInput>
-            <LabelInput name={"peso"} type={"number"} label="Peso" id={"weight"}></LabelInput>
             </div>
             <div className='form-second-smallInputs'>
             <LabelInput name={"altura"} type={"number"} label="Altura" id={"height"}></LabelInput>
