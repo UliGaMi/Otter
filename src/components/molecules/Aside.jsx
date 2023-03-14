@@ -1,3 +1,4 @@
+
 import ButtonAside from "../atoms/ButtonAside";
 import historial from "../../assets/imgs/Historial.png"
 import tabla from "../../assets/imgs/Tabla.png"
@@ -8,7 +9,7 @@ function Aside() {
         <aside className="aside-display">
             <ButtonAside img={historial} label="Historial de pacientes" url={"/historiales"}></ButtonAside>
             <ButtonAside img={paciente} label="Nuevo Paciente" url={"/nuevopaciente"}></ButtonAside>
-            <ButtonAside img={tabla} label="Tablas nutricionales" url={"/nuevopaciente"}></ButtonAside>
+            <ButtonAside img={tabla} label="Tablas nutricionales" url={"/tablas"}></ButtonAside>
         </aside>
      );
 }

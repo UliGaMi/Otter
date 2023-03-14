@@ -25,13 +25,13 @@ function FormHistorial() {
         e.preventDefault();
         if(paciente)
         {
-            const formData = new FormData(form.current);
-        let edad = getEdad(paciente.nacimiento);
-        let ind = (paciente.genero === "M" ? 1 : 0);
-        let imc = formData.get('peso')/Math.pow(paciente.altura,2);
-        let igc = (1.2*imc) + (0.23*edad) - (10.8*ind) - 5.4;
-        let uri = "https://otter.iothings.com.mx:3000/historiales";
-        let options = {
+          const formData = new FormData(form.current);
+          let edad = getEdad(paciente.nacimiento);
+          let ind = (paciente.genero === "M" ? 1 : 0);
+          let imc = formData.get('peso')/Math.pow(paciente.altura,2);
+          let igc = (1.2*imc) + (0.23*edad) - (10.8*ind) - 5.4;
+          let uri = "https://otter.iothings.com.mx:3000/historiales";
+          let options = {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -58,7 +58,7 @@ function FormHistorial() {
         }
         else
         {
-            alert('Selecciona un paciente.')
+            alert('Selecciona un paciente')
         }
         
 
@@ -70,9 +70,9 @@ function FormHistorial() {
             <h1 className='formHeader'>Nuevo Historial</h1>
             <label htmlFor="actividad">Actividad física</label>
             <select name="actividad" id="actividad">
-                <option value="S">Sedentario</option>
-                <option value="A">Activo</option>
-                <option value="MA">Muy activo</option>
+                <option value="Sedentario">Sedentario</option>
+                <option value="Activo">Activo</option>
+                <option value="Muy Activo">Muy activo</option>
             </select>
             <LabelInput name={"peso"} type={"number"} label="Peso" id={"weight"}></LabelInput>
             <LabelInput name={"descripcion"} type={"text"} label="Descripción" id={"description"}></LabelInput>

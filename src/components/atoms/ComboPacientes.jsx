@@ -4,8 +4,10 @@ import PacienteContext from "../../contexts/pacienteContext";
 
 function ComboPacientes({nutriologo}) {
   const form = useRef();
+  
   const { paciente, setPaciente } = useContext(PacienteContext);
   const [pacientes, setPacientes] = useState([]);
+  //setPaciente(null);
   const handlerChange = (e) => {
     e.preventDefault();
     const formData = new FormData(form.current);

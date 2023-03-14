@@ -1,9 +1,10 @@
 import { useContext} from "react";
+import { Turn as Hamburger } from 'hamburger-react'
 import MenuContext from "../../contexts/menuContext";
 import Logo from '../atoms/Logo'
 import DropDown from '../atoms/DropDown'
 import '../../assets/styles/Header.css'
-import { Turn as Hamburger } from 'hamburger-react'
+
 
 function Header() {
     const {menu, setMenu} = useContext(MenuContext);

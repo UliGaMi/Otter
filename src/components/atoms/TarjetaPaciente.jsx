@@ -2,7 +2,7 @@ import { useContext } from "react";
 import PacienteContext from "../../contexts/pacienteContext";
 function TarjetaPaciente() {
   const { paciente, setPaciente } = useContext(PacienteContext);
-  const btn = document.getElementById("btn-tarjetapaciente");
+  //const btn = document.getElementById("btn-tarjetapaciente");
   let nombre;
   let altura;
   let genero;
@@ -60,7 +60,7 @@ function TarjetaPaciente() {
         });
     };
   } else {
-    nombre, altura, edad, (genero = "");
+    nombre, altura, edad, genero = "";
     handlerClick = (e) => {
         alert('Selecciona un paciente')
     };
@@ -71,7 +71,7 @@ function TarjetaPaciente() {
       <label>Edad: {edad}</label>
       <label>Altura: {altura}</label>
       <label>Genero: {genero}</label>
-      <button onClick={handlerClick} id="btn-tarjetapaciente">
+      <button onClick={handlerClick}>
         Eliminar paciente
       </button>
     </div>

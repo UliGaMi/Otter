@@ -41,7 +41,7 @@ function FormPaciente({nutriologo}) {
             </div>
             <div className='form-second-smallInputs'>
             <LabelInput name={"altura"} type={"number"} label="Altura" id={"height"}></LabelInput>
-            <label>Sexo</label>
+            <label>Género</label>
             <select name="sexo">
                 <option value="M">Masculino</option>
                 <option value="F">Femenino</option>
