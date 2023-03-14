@@ -6,6 +6,8 @@ import Aside from "../components/molecules/Aside";
 import ComboPacientes from "../components/atoms/ComboPacientes";
 import LengthContext from "../contexts/lengthContext";
 import PacienteContext from "../contexts/pacienteContext";
+import TablaEquivalentes from "../components/atoms/TablaEquivalentes";
+import TablaKC from "../components/atoms/TablaKC";
 
 function Tablas({nutriologo}) {
     const [equivalentes, setEquivalentes] = useState({ verduras: 0, frutas: 0, cyt_sg: 0, cyt_cg: 0, leguminosas: 0 , animal_mb: 0, animal_b: 0 , animal_m: 0, animal_a: 0 , leche_d: 0, leche_sd:0, leche_e: 0, leche_ca: 0, aceite_sp: 0 , aceite_cp: 0, azucar_sg: 0, azucar_cg: 0, lde: 0 , alcohol: 0 });
@@ -82,11 +84,15 @@ function Tablas({nutriologo}) {
         <ComboPacientes nutriologo={nutriologo}></ComboPacientes>
         <div>
             {
-                !!length && `${equivalentes.verduras} ${kc.ge}`
+                !!length && <TablaEquivalentes equivalentes={equivalentes} kc={kc}/>
+            }
+        </div>
+        <div>
+            {
+                !!length && <TablaKC kc={kc}/>
             }
         </div>
         <button onClick={handlerClick}>Recalcular tablas</button>
-        <button onClick={() => {alert(length)}}></button>
         </>
     );
 

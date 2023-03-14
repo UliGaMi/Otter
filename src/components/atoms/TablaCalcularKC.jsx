@@ -1,6 +1,7 @@
 import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import KCContext from "../../contexts/kcContext";
+import ButtonCancelar from "./ButtonCancelar";
 
 function TablaCalcularKC({ge, geb, eta, efa, paciente}) {
   const {kc, setKC} = useContext(KCContext);
@@ -18,7 +19,7 @@ function TablaCalcularKC({ge, geb, eta, efa, paciente}) {
   const handlerClick = () => {
     if((porcentajes.hco*100 + porcentajes.prot*100 + porcentajes.lip*100) == 100)
     {
-        setKC({id_paciente: paciente._id, geb: geb, ge: ge, eta: eta, efa: efa, hco: porcentajes.hco, prot: porcentajes.prot, lip: porcentajes.lip});
+        setKC({id_paciente: paciente._id, geb: (geb).toFixed(2), ge: (ge).toFixed(2), eta: (eta).toFixed(2), efa: (efa).toFixed(2), hco: porcentajes.hco, prot: porcentajes.prot, lip: porcentajes.lip});
         navigate("/calcularequivalentes");
 
     }
@@ -47,9 +48,9 @@ function TablaCalcularKC({ge, geb, eta, efa, paciente}) {
           <td>
             <input type="number" placeholder="0" onChange={handlerChange1} />
           </td>
-          <td>{ge * porcentajes.hco}</td>
+          <td>{(ge * porcentajes.hco).toFixed(2)}</td>
           <td>4</td>
-          <td>{(ge * porcentajes.hco) / 4}</td>
+          <td>{((ge * porcentajes.hco) / 4).toFixed(2)}</td>
         </tr>
         <tr>
           <td>PROT</td>
@@ -57,9 +58,9 @@ function TablaCalcularKC({ge, geb, eta, efa, paciente}) {
           <td>
             <input type="number" placeholder="0" onChange={handlerChange2} />
           </td>
-          <td>{ge * porcentajes.prot}</td>
+          <td>{(ge * porcentajes.prot).toFixed(2)}</td>
           <td>4</td>
-          <td>{(ge * porcentajes.prot) / 4}</td>
+          <td>{((ge * porcentajes.prot) / 4).toFixed(2)}</td>
         </tr>
         <tr>
           <td>LIP</td>
@@ -67,13 +68,13 @@ function TablaCalcularKC({ge, geb, eta, efa, paciente}) {
           <td>
             <input type="number" placeholder="0" onChange={handlerChange3} />
           </td>
-          <td>{ge * porcentajes.lip}</td>
+          <td>{(ge * porcentajes.lip).toFixed(2)}</td>
           <td>9</td>
-          <td>{(ge * porcentajes.lip) / 9}</td>
+          <td>{((ge * porcentajes.lip) / 9).toFixed(2)}</td>
         </tr>
       </tbody>
     </table>
-        <button onClick={() => {alert(geb)}}>Cancelar</button>
+        <ButtonCancelar></ButtonCancelar>
         <button onClick={handlerClick}>Continuar</button>
     </>
   );

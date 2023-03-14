@@ -28,8 +28,8 @@ function FormHistorial() {
           const formData = new FormData(form.current);
           let edad = getEdad(paciente.nacimiento);
           let ind = (paciente.genero === "M" ? 1 : 0);
-          let imc = formData.get('peso')/Math.pow(paciente.altura,2);
-          let igc = (1.2*imc) + (0.23*edad) - (10.8*ind) - 5.4;
+          let imc = (formData.get('peso')/Math.pow(paciente.altura,2)).toFixed(2);
+          let igc = ((1.2*imc) + (0.23*edad) - (10.8*ind) - 5.4).toFixed(2);
           let uri = "https://otter.iothings.com.mx:3000/historiales";
           let options = {
           method: "POST",

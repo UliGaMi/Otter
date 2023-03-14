@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import KCContext from "../../contexts/kcContext";
 import PacienteContext from "../../contexts/pacienteContext";
+import ButtonCancelar from "./ButtonCancelar";
 function TablaCalcularEq() {
   const navigate = useNavigate();
     const {paciente, setPaciente} = useContext(PacienteContext);
@@ -355,15 +356,15 @@ function TablaCalcularEq() {
                     <td>Cantidades recomendadas</td>
                     <td></td>
                     <td>{kc.ge}</td>
-                    <td>{(kc.ge*kc.prot)/4}</td>
-                    <td>{(kc.ge*kc.lip)/9}</td>
-                    <td>{(kc.ge*kc.hco)/4}</td>
+                    <td>{((kc.ge*kc.prot)/4).toFixed(2)}</td>
+                    <td>{((kc.ge*kc.lip)/9).toFixed(2)}</td>
+                    <td>{((kc.ge*kc.hco)/4).toFixed(2)}</td>
                 </tr>
 
 
             </tbody>
         </table>
-        <button>Cancelar</button>
+        <ButtonCancelar></ButtonCancelar>
         <button onClick={handlerClick}>Guardar tablas</button>
         </>
      );
