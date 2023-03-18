@@ -1,7 +1,9 @@
 import { useContext, useEffect, useState } from "react";
 import PacienteContext from "../../contexts/pacienteContext";
 import IsChangedContext from "../../contexts/isChangedContext";
+import TokenContext from "../../contexts/tokenContext";
 function Historiales() {
+    const {token,setToken} = useContext(TokenContext);
     const { paciente, setPaciente } = useContext(PacienteContext);
     const { isChanged, setIsChanged } = useContext(IsChangedContext);
     const [historiales, setHistoriales] = useState([]);
@@ -12,6 +14,7 @@ function Historiales() {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
+          "Authorization": `Bearer ${token}`
         },
       };
 
@@ -29,8 +32,14 @@ function Historiales() {
     useEffect(() => {
       if(paciente)
       {
+        let options = {
+          method: "GET",
+          headers: {
+          "Authorization": `Bearer ${token}`
+          },
+        }
         let uri = `https://otter.iothings.com.mx:3000/historiales/${paciente._id}`;
-        fetch(uri)
+        fetch(uri, options)
         .then((response) => response.json())
         .then((data) => {
           setHistoriales(data)

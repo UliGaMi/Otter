@@ -1,6 +1,7 @@
 import Header from "../components/molecules/Header";
 import Aside from "../components/molecules/Aside";
 function Bienvenido({nutriologo}) {
+
     return (  
         <>
         <Header></Header>

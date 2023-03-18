@@ -3,9 +3,11 @@ import PacienteContext from "../../contexts/pacienteContext";
 import IsChangedContext from "../../contexts/isChangedContext";
 import LabelInput from '../atoms/LabelInput';
 import ButtonForm from '../atoms/ButtonForm';
+import TokenContext from "../../contexts/tokenContext";
 
 function FormHistorial() {
     const form = useRef();
+    const {token, setToken} = useContext(TokenContext);
     const { paciente, setPaciente } = useContext(PacienteContext);
     const { isChanged, setIsChanged } = useContext(IsChangedContext);
     let getEdad = (dateString) => {
@@ -35,6 +37,7 @@ function FormHistorial() {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`
           },
           body: JSON.stringify({
             id_paciente: paciente._id,

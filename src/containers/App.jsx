@@ -11,6 +11,7 @@ import EnlacesContext from "../contexts/enlacesContext";
 import UltimoHistContext from "../contexts/ultimoHistContext.js";
 import KCContext from "../contexts/kcContext.js";
 import LengthContext from "../contexts/lengthContext.js";
+import TokenContext from "../contexts/tokenContext.js";
 import LogIn from "../pages/LogIn";
 import SignUp from "../pages/SignUp";
 import LandingPage from "../pages/LandingPage";
@@ -25,6 +26,7 @@ import ProtectedParentRoute from './ProtectedParentRoute';
 import "../assets/styles/App.css";
 
 function App() {
+  const [token, setToken] = useState(null);
   const [nutriologo, setNutriologo] = useState({});
   const [paciente, setPaciente] = useState(null);
   const [length, setLength] = useState(0);
@@ -46,6 +48,7 @@ function App() {
         <UltimoHistContext.Provider value={{ultimoHist, setUltimoHist}}>
         <KCContext.Provider value={{kc, setKC}}>
         <LengthContext.Provider value={{length, setLength}}>
+        <TokenContext.Provider value={{token, setToken}}>
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/login" element={<LogIn />} />
@@ -60,6 +63,7 @@ function App() {
               <Route path="/calcularequivalentes" element={<CalcularEquivalentes/>}/>
             </Route>
           </Routes>
+          </TokenContext.Provider>
           </LengthContext.Provider>
           </KCContext.Provider>
           </UltimoHistContext.Provider>

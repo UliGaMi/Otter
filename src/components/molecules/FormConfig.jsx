@@ -1,7 +1,9 @@
-import { useRef } from "react";
+import { useRef, useContext } from "react";
 import LabelInput from "../atoms/LabelInput";
 import ButtonForm from "../atoms/ButtonForm";
+import TokenContext from "../../contexts/tokenContext";
 function FormConfig({ nutriologo }) {
+  const {token, setToken} = useContext(TokenContext);
   const form = useRef();
   const handlerClick = (e) => {
     e.preventDefault();
@@ -12,6 +14,7 @@ function FormConfig({ nutriologo }) {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
+          "Authorization": `Bearer ${token}`
         },
         body: JSON.stringify({
           contrasenia: formData.get("contrasenia"),

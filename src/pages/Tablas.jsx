@@ -8,8 +8,10 @@ import LengthContext from "../contexts/lengthContext";
 import PacienteContext from "../contexts/pacienteContext";
 import TablaEquivalentes from "../components/atoms/TablaEquivalentes";
 import TablaKC from "../components/atoms/TablaKC";
+import TokenContext from "../contexts/tokenContext";
 
 function Tablas({nutriologo}) {
+    const {token, setToken} = useContext(TokenContext);
     const [equivalentes, setEquivalentes] = useState({ verduras: 0, frutas: 0, cyt_sg: 0, cyt_cg: 0, leguminosas: 0 , animal_mb: 0, animal_b: 0 , animal_m: 0, animal_a: 0 , leche_d: 0, leche_sd:0, leche_e: 0, leche_ca: 0, aceite_sp: 0 , aceite_cp: 0, azucar_sg: 0, azucar_cg: 0, lde: 0 , alcohol: 0 });
     const [kc, setKC] = useState({ge: 0, hco: 0, lip: 0, prot: 0})
     const {paciente, setPaciente} = useContext(PacienteContext);
@@ -19,13 +21,19 @@ function Tablas({nutriologo}) {
     useEffect(() => {
         if(paciente)
         {
-            fetch(`https://otter.iothings.com.mx:3000/equivalentes/${paciente._id}`)
+            let options = {
+                method: "GET",
+                headers: {
+                "Authorization": `Bearer ${token}`
+                },
+              }
+            fetch(`https://otter.iothings.com.mx:3000/equivalentes/${paciente._id}`, options)
             .then((response) => response.json())
             .then((data) => {
                 if(data.length)
                 {
                     setEquivalentes(data[0]);
-                    fetch(`https://otter.iothings.com.mx:3000/kcs/${paciente._id}`)
+                    fetch(`https://otter.iothings.com.mx:3000/kcs/${paciente._id}`, options)
                     .then((response) => response.json())
                     .then((data) => {
                     if(data.length)
@@ -54,8 +62,14 @@ function Tablas({nutriologo}) {
     const handlerClick =  () => {
         if(paciente)
         {
+            let options = {
+                method: "GET",
+                headers: {
+                "Authorization": `Bearer ${token}`
+                },
+              }
             let uri = `https://otter.iothings.com.mx:3000/ultimohistorial/${paciente._id}`;
-            fetch(uri)
+            fetch(uri, options)
             .then((response) => response.json())
             .then((data) => {
                 if(data.length != 0)

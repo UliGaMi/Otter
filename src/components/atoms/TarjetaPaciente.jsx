@@ -1,8 +1,9 @@
 import { useContext } from "react";
 import PacienteContext from "../../contexts/pacienteContext";
+import TokenContext from "../../contexts/tokenContext";
 function TarjetaPaciente() {
   const { paciente, setPaciente } = useContext(PacienteContext);
-  //const btn = document.getElementById("btn-tarjetapaciente");
+  const {token,setToken} = useContext(TokenContext);
   let nombre;
   let altura;
   let genero;
@@ -32,6 +33,7 @@ function TarjetaPaciente() {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
+          "Authorization": `Bearer ${token}`
         },
       };
 
@@ -46,6 +48,7 @@ function TarjetaPaciente() {
               method: "DELETE",
               headers: {
                 "Content-Type": "application/json",
+                "Authorization": `Bearer ${token}`
               },
             };
 

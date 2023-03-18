@@ -1,10 +1,10 @@
 import { useEffect, useState, useContext, useRef} from "react";
 import PacienteContext from "../../contexts/pacienteContext";
-
+import TokenContext from "../../contexts/tokenContext";
 
 function ComboPacientes({nutriologo}) {
   const form = useRef();
-  
+  const {token,setToken} = useContext(TokenContext);
   const { paciente, setPaciente } = useContext(PacienteContext);
   const [pacientes, setPacientes] = useState([]);
   //setPaciente(null);
@@ -16,8 +16,14 @@ function ComboPacientes({nutriologo}) {
   }
 
   useEffect(() => {
+    let options = {
+      method: "GET",
+      headers: {
+      "Authorization": `Bearer ${token}`
+      },
+    }
     let uri = `https://otter.iothings.com.mx:3000/pacientes/${nutriologo._id}`;
-      fetch(uri)
+      fetch(uri, options)
         .then((response) => response.json())
         .then((data) => {
           setPacientes(data)

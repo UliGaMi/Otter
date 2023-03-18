@@ -1,10 +1,12 @@
-import {useRef} from 'react';
+import {useContext, useRef} from 'react';
 import LabelInput from '../atoms/LabelInput';
 import ButtonForm from '../atoms/ButtonForm';
+import TokenContext from "../../contexts/tokenContext";
 import "../../assets/styles/FormPaciente.css"
 
 function FormPaciente({nutriologo}) {
     const form = useRef();
+    const {token, setToken} = useContext(TokenContext);
     const handlerClick = (e) => {
         e.preventDefault();
         const formData = new FormData(form.current);
@@ -13,6 +15,7 @@ function FormPaciente({nutriologo}) {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`
           },
           body: JSON.stringify({
             id_nutriologo: nutriologo._id,

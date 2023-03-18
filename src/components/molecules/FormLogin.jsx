@@ -2,6 +2,7 @@ import { useRef, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import UserContext from "../../contexts/userContext";
 import NutriologoContext from "../../contexts/nutriologoContext";
+import TokenContext from "../../contexts/tokenContext";
 import Logo from "../atoms/Logo";
 import LabelInput from "../atoms/LabelInput";
 import ButtonForm from "../atoms/ButtonForm";
@@ -10,6 +11,7 @@ import "../../assets/styles/Form.css";
 function FormLogin() {
   const navigate = useNavigate();
   const form = useRef();
+  const {token, setToken} = useContext(TokenContext);
   const { isLoged, setIsLoged } = useContext(UserContext);
   const { nutriologo, setNutriologo } = useContext(NutriologoContext);
   const handlerClick = (e) => {
@@ -34,6 +36,7 @@ function FormLogin() {
         if (data.status) {
           setIsLoged(true);
           setNutriologo(data.nutriologo);
+          setToken(data.token);
           navigate("/bienvenido");
         }
       });

@@ -3,7 +3,9 @@ import { useNavigate } from "react-router-dom";
 import KCContext from "../../contexts/kcContext";
 import PacienteContext from "../../contexts/pacienteContext";
 import ButtonCancelar from "./ButtonCancelar";
+import TokenContext from "../../contexts/tokenContext";
 function TablaCalcularEq() {
+  const {token,setToken} = useContext(TokenContext);
   const navigate = useNavigate();
     const {paciente, setPaciente} = useContext(PacienteContext);
     const {kc, setKC} = useContext(KCContext);
@@ -66,7 +68,13 @@ function TablaCalcularEq() {
         setEquivalentes({ ...equivalentes, alcohol: e.target.value});
       };
       const handlerClick = (e) => {
-        fetch(`https://otter.iothings.com.mx:3000/kcs/${paciente._id}`)
+        let options6 = {
+          method: "GET",
+          headers: {
+          "Authorization": `Bearer ${token}`
+          },
+        }
+        fetch(`https://otter.iothings.com.mx:3000/kcs/${paciente._id}`, options6)
             .then((response) => response.json())
             .then((data) => {
                 if(data.length != 0)
@@ -76,6 +84,7 @@ function TablaCalcularEq() {
                     method: "DELETE",
                     headers: {
                       "Content-Type": "application/json",
+                      "Authorization": `Bearer ${token}`
                     },
                   };
       
@@ -84,8 +93,13 @@ function TablaCalcularEq() {
                   .then((data) => {
                   alert("Tabla anterior de kc borrada");
                   });
-
-                  fetch(`https://otter.iothings.com.mx:3000/equivalentes/${paciente._id}`)
+                  let options5 = {
+                    method: "GET",
+                    headers: {
+                    "Authorization": `Bearer ${token}`
+                    },
+                  }
+                  fetch(`https://otter.iothings.com.mx:3000/equivalentes/${paciente._id}`, options5)
                   .then((response) => response.json())
                   .then((data) => {
                     if(data.length != 0)
@@ -95,6 +109,7 @@ function TablaCalcularEq() {
                       method: "DELETE",
                       headers: {
                       "Content-Type": "application/json",
+                      "Authorization": `Bearer ${token}`
                       },
                       };
       
@@ -111,6 +126,7 @@ function TablaCalcularEq() {
                     method: "POST",
                     headers: {
                       "Content-Type": "application/json",
+                      "Authorization": `Bearer ${token}`
                     },
                     body: JSON.stringify({
                       id_paciente: paciente._id,
@@ -134,6 +150,7 @@ function TablaCalcularEq() {
                         method: "POST",
                         headers: {
                           "Content-Type": "application/json",
+                          "Authorization": `Bearer ${token}`
                         },
                         body: JSON.stringify({
                           id_paciente: paciente._id,

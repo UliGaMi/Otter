@@ -14,17 +14,17 @@ function TablaKC({kc}) {
       <tbody>
         <tr>
           <td>HCO</td>
-          <td>{kc.ge}</td>
-          <td>{kc.hco}</td>
+          <td>{(kc.ge).toFixed(2)}</td>
+          <td>{kc.hco*100}</td>
           <td>{(kc.ge * kc.hco).toFixed(2)}</td>
           <td>4</td>
           <td>{((kc.ge * kc.hco) / 4).toFixed(2)}</td>
         </tr>
         <tr>
           <td>PROT</td>
-          <td>{kc.ge}</td>
+          <td>{(kc.ge).toFixed(2)}</td>
           <td>
-            {kc.prot}
+            {kc.prot*100}
           </td>
           <td>{(kc.ge * kc.prot).toFixed(2)}</td>
           <td>4</td>
@@ -34,7 +34,7 @@ function TablaKC({kc}) {
           <td>LIP</td>
           <td>{kc.ge}</td>
           <td>
-            {kc.lip}
+            {kc.lip*100}
           </td>
           <td>{(kc.ge * kc.lip).toFixed(2)}</td>
           <td>9</td>
