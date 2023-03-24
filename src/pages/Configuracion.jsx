@@ -4,21 +4,21 @@ import Aside from "../components/molecules/Aside";
 import NutriologoContext from "../contexts/nutriologoContext";
 import TarjetaNutriologo from "../components/atoms/TarjetaNutriologo";
 import FormConfig from "../components/molecules/FormConfig";
-import "../assets/styles/Configuracion.css"
 function Configuración() {
     const {nutriologo, setNutriologo} = useContext(NutriologoContext);
     return ( 
-        <>
-            <Header></Header>
-            <main className="main-nutriologo">
-            <Aside></Aside>
-            <div className="div-nutriologo">
-            <TarjetaNutriologo nutriologo={nutriologo} clase={"div-tarjetanutriologo"}/>
-            <FormConfig nutriologo={nutriologo}></FormConfig>
+        <div className="div-page">
+            <Header></Header> 
+            <div className="div-page-main">
+                <Aside></Aside>
+                <div className="div-page-content">
+                <TarjetaNutriologo nutriologo={nutriologo} clase={"div-tarjetanutriologo"}/>
+                <FormConfig nutriologo={nutriologo}></FormConfig>
+                </div>
             </div>
-            </main>
 
-        </>
+        </div>
+ 
         
      );
 }

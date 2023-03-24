@@ -1,0 +1,18 @@
+.div-page{
+    display: flex;
+    flex-direction: column;
+}
+
+.div-page-main{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.div-page-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+}

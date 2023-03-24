@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import PacienteContext from "../../contexts/pacienteContext";
 import TokenContext from "../../contexts/tokenContext";
+import '../../assets/styles/TarjetaPaciente.css'
 function TarjetaPaciente() {
   const { paciente, setPaciente } = useContext(PacienteContext);
   const {token,setToken} = useContext(TokenContext);
@@ -69,7 +70,7 @@ function TarjetaPaciente() {
     };
   }
   return (
-    <div>
+    <div className="div-tarjetapaciente">
       <label>Paciente: {nombre}</label>
       <label>Edad: {edad}</label>
       <label>Altura: {altura}</label>

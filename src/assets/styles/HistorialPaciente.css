@@ -1,0 +1,16 @@
+.tarjeta1-historialpaciente, .tarjeta2-historialpaciente{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    height: 45%;
+    background-color: #7AAC51;
+}
+
+.tarjeta3-historialpaciente{
+    width: 90%;
+    height: 45%;
+    background-color: #EEECCA;
+}
+
+
+

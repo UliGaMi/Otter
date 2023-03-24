@@ -1,4 +1,4 @@
-import { useContext} from "react";
+import { useContext, useEffect} from "react";
 import { Turn as Hamburger } from 'hamburger-react'
 import MenuContext from "../../contexts/menuContext";
 import Logo from '../atoms/Logo'

@@ -4,7 +4,9 @@ import KCContext from "../../contexts/kcContext";
 import PacienteContext from "../../contexts/pacienteContext";
 import ButtonCancelar from "./ButtonCancelar";
 import TokenContext from "../../contexts/tokenContext";
+import MenuContext from "../../contexts/menuContext";
 function TablaCalcularEq() {
+  const {menu, setMenu} = useContext(MenuContext);
   const {token,setToken} = useContext(TokenContext);
   const navigate = useNavigate();
     const {paciente, setPaciente} = useContext(PacienteContext);
@@ -183,6 +185,7 @@ function TablaCalcularEq() {
                       .then((data) => {
                       if(data.status)
                       {
+                        setMenu(false);
                         setKC(null);
                         setPaciente(null);
                         navigate("/tablas")

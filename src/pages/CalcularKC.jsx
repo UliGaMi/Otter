@@ -38,11 +38,17 @@ function CalcularKC({paciente}) {
 
     
     return ( 
-        <>
-        <Header></Header>
-        <Aside></Aside>
-        <TablaCalcularKC ge={ge} geb={geb} eta={eta} efa={efa} paciente={paciente}></TablaCalcularKC>
-        </>
+      
+        <div className="div-page">
+            <Header></Header> 
+            <div className="div-page-main">
+                <Aside></Aside>
+                <div className="div-page-content">
+                  <TablaCalcularKC ge={ge} geb={geb} eta={eta} efa={efa} paciente={paciente}></TablaCalcularKC>
+                </div>
+            </div>
+
+        </div>
 
      );
 }

@@ -3,11 +3,17 @@ import Aside from "../components/molecules/Aside";
 import TablaCalcularEq from "../components/atoms/TablaCalcularEq";
 function CalcularEquivalentes() {
     return ( 
-        <>
-            <Header></Header>
-            <Aside></Aside>
-            <TablaCalcularEq></TablaCalcularEq>
-        </>
+        <div className="div-page">
+            <Header></Header> 
+            <div className="div-page-main">
+                <Aside></Aside>
+                <div className="div-page-content">
+                    <TablaCalcularEq></TablaCalcularEq>
+                </div>
+            </div>
+
+        </div>
+
      );
 }
 

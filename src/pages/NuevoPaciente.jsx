@@ -3,18 +3,22 @@ import NutriologoContext from "../contexts/nutriologoContext";
 import Header from "../components/molecules/Header";
 import FormPaciente from "../components/molecules/FormPaciente";
 import Aside from "../components/molecules/Aside";
-import "../assets/styles/NuevoPaciente.css"
 function NuevoPaciente() {
     const {nutriologo, setNutriologo} = useContext(NutriologoContext);
     
     return ( 
-        <>
-            <Header></Header>
-            <main className="main-añadir-paciente">
-            <Aside></Aside>
-            <FormPaciente nutriologo={nutriologo}></FormPaciente>
-            </main>
-        </>
+
+        <div className="div-page">
+            <Header></Header> 
+            <div className="div-page-main">
+                <Aside></Aside>
+                <div className="div-page-content">
+                <FormPaciente nutriologo={nutriologo}></FormPaciente>
+                </div>
+            </div>
+
+        </div>
+
         
      );
 }

@@ -1,0 +1,23 @@
+.div-buttonaside{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.button-buttonaside{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+
+}
+
+.div-buttonaside :hover
+{
+    background-color: #7AAC51;
+}

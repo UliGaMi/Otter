@@ -1,0 +1,11 @@
+.div-tarjetapaciente
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.div-tarjetapaciente button {
+    align-self: flex-end;
+}

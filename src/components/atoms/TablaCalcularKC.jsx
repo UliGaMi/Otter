@@ -2,8 +2,10 @@ import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import KCContext from "../../contexts/kcContext";
 import ButtonCancelar from "./ButtonCancelar";
+import MenuContext from "../../contexts/menuContext";
 
 function TablaCalcularKC({ge, geb, eta, efa, paciente}) {
+  const {menu, setMenu} = useContext(MenuContext);
   const {kc, setKC} = useContext(KCContext);
   const navigate = useNavigate();
   const [porcentajes, setPorcentajes] = useState({ hco: 0, prot: 0, lip: 0 });
@@ -19,6 +21,7 @@ function TablaCalcularKC({ge, geb, eta, efa, paciente}) {
   const handlerClick = () => {
     if((porcentajes.hco*100 + porcentajes.prot*100 + porcentajes.lip*100) == 100)
     {
+        setMenu(false);
         setKC({id_paciente: paciente._id, geb: (geb).toFixed(2), ge: (ge).toFixed(2), eta: (eta).toFixed(2), efa: (efa).toFixed(2), hco: porcentajes.hco, prot: porcentajes.prot, lip: porcentajes.lip});
         navigate("/calcularequivalentes");
 

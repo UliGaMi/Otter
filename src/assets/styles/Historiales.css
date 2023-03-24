@@ -1,0 +1,12 @@
+.div-historiales{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.div-historiales-historial{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+

@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import PacienteContext from "../../contexts/pacienteContext";
 import IsChangedContext from "../../contexts/isChangedContext";
 import TokenContext from "../../contexts/tokenContext";
+import '../../assets/styles/Historiales.css';
 function Historiales() {
     const {token,setToken} = useContext(TokenContext);
     const { paciente, setPaciente } = useContext(PacienteContext);
