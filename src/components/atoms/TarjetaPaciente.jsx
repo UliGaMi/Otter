@@ -2,6 +2,8 @@ import { useContext } from "react";
 import PacienteContext from "../../contexts/pacienteContext";
 import TokenContext from "../../contexts/tokenContext";
 import '../../assets/styles/TarjetaPaciente.css'
+import PersonRemoveIcon from '@mui/icons-material/PersonRemove';
+import { width } from "@mui/system";
 function TarjetaPaciente() {
   const { paciente, setPaciente } = useContext(PacienteContext);
   const {token,setToken} = useContext(TokenContext);
@@ -76,7 +78,8 @@ function TarjetaPaciente() {
       <label>Altura: {altura}</label>
       <label>Genero: {genero}</label>
       <button onClick={handlerClick}>
-        Eliminar paciente
+        <PersonRemoveIcon fontSize="inherit"></PersonRemoveIcon>
+        <p>Eliminar Paciente</p>
       </button>
     </div>
   );

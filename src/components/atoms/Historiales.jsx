@@ -3,6 +3,7 @@ import PacienteContext from "../../contexts/pacienteContext";
 import IsChangedContext from "../../contexts/isChangedContext";
 import TokenContext from "../../contexts/tokenContext";
 import '../../assets/styles/Historiales.css';
+import DeleteForeverRoundedIcon from '@mui/icons-material/DeleteForeverRounded';
 function Historiales() {
     const {token,setToken} = useContext(TokenContext);
     const { paciente, setPaciente } = useContext(PacienteContext);
@@ -55,7 +56,7 @@ function Historiales() {
     return (  
         <div className="div-historiales">
             {
-            historiales.map(historial => (<div className="div-historiales-historial" key={historial._id}><label>Fecha: {historial.fecha}</label><label>Peso: {historial.peso}</label><label>Actividad física: {historial.actividad_fisica}</label><label>IMC: {historial.imc}</label><label>IGC: {historial.igc}</label><label>Descripción: {historial.descripcion}</label><button onClick={() => {eliminarHistorial(historial._id)}}>Borrar historial</button></div>))
+            historiales.map(historial => (<div className="div-historiales-historial" key={historial._id}><label>Fecha: {historial.fecha}</label><label>Peso: {historial.peso}</label><label>Actividad física: {historial.actividad_fisica}</label><label>IMC: {historial.imc}</label><label>IGC: {historial.igc}</label><label>Descripción: {historial.descripcion}</label><button onClick={() => {eliminarHistorial(historial._id)}}><DeleteForeverRoundedIcon fontSize="inherit"></DeleteForeverRoundedIcon><p>Eliminar Historial</p> </button></div>))
             }
         </div>
     );

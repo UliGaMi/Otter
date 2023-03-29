@@ -16,13 +16,19 @@ function HistorialPaciente({nutriologo}) {
                 <Aside></Aside>
                 <div className="div-page-content">
                     <div className="tarjeta1-historialpaciente">
+                        <div className="subtarjeta1-historialpaciente">
                         <ComboPacientes nutriologo={nutriologo}></ComboPacientes>
                         <TarjetaPaciente></TarjetaPaciente>
+                        </div>                    
                     </div>
                     <div className="tarjeta2-historialpaciente">
+                        <div className="subtarjeta2-historialpaciente">
+                            <h1>Nuevo historial</h1>
                         <FormHistorial></FormHistorial>
+                        </div>
                     </div>
                     <div className="tarjeta3-historialpaciente">
+                        <h1>Historiales de nutrición</h1>
                         <Historiales></Historiales>
                     </div>
                 </div>

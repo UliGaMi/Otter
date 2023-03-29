@@ -4,6 +4,7 @@ import IsChangedContext from "../../contexts/isChangedContext";
 import LabelInput from '../atoms/LabelInput';
 import ButtonForm from '../atoms/ButtonForm';
 import TokenContext from "../../contexts/tokenContext";
+import "../../assets/styles/FormHistorial.css"
 
 function FormHistorial() {
     const form = useRef();
@@ -70,18 +71,25 @@ function FormHistorial() {
     return ( 
         <div className="div-formhistorial">
             <form ref={form}>
-            <h1 className='formHeader'>Nuevo Historial</h1>
+            <div>
             <label htmlFor="actividad">Actividad física</label>
             <select name="actividad" id="actividad">
                 <option value="Sedentario">Sedentario</option>
                 <option value="Activo">Activo</option>
                 <option value="Muy Activo">Muy activo</option>
             </select>
-            <LabelInput name={"peso"} type={"number"} label="Peso" id={"weight"}></LabelInput>
-            <LabelInput name={"descripcion"} type={"text"} label="Descripción" id={"description"}></LabelInput>
+            </div>
+            <div>
+              <label htmlFor="peso">Peso</label>
+              <input type="number" name="peso" />
+            </div>
+            <div>
+              <label htmlFor="descripion">Diagnóstico</label>
+              <input type="text" name="descripcion"/>
+            </div>
+            {/* <LabelInput name={"peso"} type={"number"} label="Peso" id={"weight"}></LabelInput>
+            <LabelInput name={"descripcion"} type={"text"} label="Descripción" id={"description"}></LabelInput> */}
             <ButtonForm handler={handlerClick} label={"Agregar historial"}></ButtonForm>
-            
-
             </form>
         </div>
 

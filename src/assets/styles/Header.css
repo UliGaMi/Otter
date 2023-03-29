@@ -34,6 +34,14 @@
 }
 
 .div-menu{
-    width: 100vw;
+    width: 100%;
     background-color: bisque;
+}
+
+@media screen and (max-width:1023px) {
+    
+    .div-header-logo img{
+        height: 90%;
+        width: auto;
+    }
 }

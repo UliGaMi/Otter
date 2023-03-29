@@ -1,51 +1,220 @@
 .div-formpaciente{
     display: flex;
-    width: 80vw;
+    width: 100%;
+    height: 100%;
     justify-content: center;
     align-items:center;
 }
 
-form{
-    width: 50%;
+.div-formpaciente h1{
+    text-align: center;
+    margin: 0;
+    font-size: 2.1rem;
+    color: #4da43c;
+
 }
 
-.formHeader{
-    margin-bottom: 5rem;
-}
-
-.labelInput{
+.div-formpaciente form{
+    width: 60%;
+    height: 80%;
     display: flex;
-    margin-bottom: 2rem;
     flex-direction: column;
-
-
+    justify-content: space-evenly;
+    font-size: 1.4rem;
 }
 
-.labelInput input{
-    height: 2em;
+.div-formpaciente input{
+    width: 100%;
+    height: 35%;
+    border-radius: 10px;
+    background-color: #eae9e9;
+    font-size: 1.4rem;
 }
 
-.form-first-smallInputs{
+
+.div-formpaciente-nombre{
+    height: 20%;
+}
+
+.div-formpaciente-datospaciente{
     display: flex;
-    width: 40%;
-    flex-direction: column;
-
-}
-
-.form-second-smallInputs{
-    display: flex;
-    width: 40%;
-    flex-direction: column;
-
-}
-
-.form-second-smallInputs select{
- 
-    height: 2em;
-}
-
-.div-smallInputsContainer{
-    display: flex;
+    width: 100%;
+    height: 20%;
+    flex-direction: row;
     justify-content: space-between;
+
 }
 
+.div-formpaciente-datospaciente div{
+    width: 30%;
+    
+}
+.div-formpaciente-nombre div{
+    height: 100%;
+}
+
+
+.div-formpaciente-select{
+
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+}
+
+.div-formpaciente-select select{
+    background-color: #eae9e9;
+    height: 30%;
+    border-radius: 10px;
+    font-size: 1.4rem;
+
+}
+.div-botonpaciente{
+    width: 100%;
+    height: 7%;
+    
+    display: flex;
+    justify-content: center;
+}
+
+
+.div-botonpaciente button{
+    width: 100%;
+    font-size: 1.4rem;
+    color: #eeecca;
+    background-color: #7aac51;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+@media screen and (max-width:1023px) {
+
+    .div-formpaciente h1{
+        text-align: center;
+        font-size: 1.6rem;
+    
+    }
+    
+    .div-formpaciente form{
+        width: 80%;
+        height: 80%;
+        display: flex;
+        font-size: 1rem;
+    }
+    
+    .div-formpaciente input{
+        width: 100%;
+        height: 35%;
+        font-size: 1.1rem;
+        padding-right: 2%;
+    }
+    
+    
+    .div-formpaciente-nombre{
+        height: 20%;
+    }
+    
+    .div-formpaciente-datospaciente{
+        display: flex;
+        width: 100%;
+        height: 20%;
+        flex-direction: row;
+        justify-content: space-between;
+    
+    }
+    
+    .div-formpaciente-datospaciente div{
+        width: 30%;
+        
+    }
+    .div-formpaciente-nombre div{
+        height: 100%;
+    }
+    
+    
+    .div-formpaciente-select{
+    
+    display: flex;
+    flex-direction: column;
+    }
+    
+    .div-formpaciente-select select{
+
+        font-size: 1.1rem;
+    
+    }
+    
+    .div-botonpaciente button{
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width:680px) {
+
+    .div-formpaciente h1{
+        text-align: center;
+        font-size: 1.8rem;
+    
+    }
+    
+    .div-formpaciente form{
+        width: 90%;
+        height: 80%;
+        display: flex;
+        font-size: 0.7rem;
+    }
+    
+    .div-formpaciente input{
+        width: 100%;
+        height: 35%;
+        font-size: 0.9rem;
+    }
+    
+    
+    .div-formpaciente-nombre{
+        height: 20%;
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+    .div-formpaciente-datospaciente{
+        display: flex;
+        width: 100%;
+        height: 50%;
+        flex-direction: column;
+        justify-content: space-between;
+    
+    }
+    
+    .div-formpaciente-datospaciente div{
+        height: 40%;
+        width: 100%;
+        font-size: 1rem;
+        
+    }
+    .div-formpaciente-nombre div{
+        height: 100%;
+    }
+    
+    
+    .div-formpaciente-select{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 0.9rem;
+    }
+    
+    .div-formpaciente-select select{
+
+        font-size: 0.9rem;
+        height: 40%;
+    
+    }
+    
+    .div-botonpaciente button{
+        font-size: 1.1rem;
+    }
+
+}

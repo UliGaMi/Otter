@@ -10,7 +10,7 @@ import TablaEquivalentes from "../components/atoms/TablaEquivalentes";
 import TablaKC from "../components/atoms/TablaKC";
 import TokenContext from "../contexts/tokenContext";
 import MenuContext from "../contexts/menuContext";
-
+import '../assets/styles/Tablas.css';
 function Tablas({nutriologo}) {
     const {menu, setMenu} = useContext(MenuContext);
     const {token, setToken} = useContext(TokenContext);
@@ -101,16 +101,26 @@ function Tablas({nutriologo}) {
             <div className="div-page-main">
                 <Aside></Aside>
                 <div className="div-page-content">
-                    <ComboPacientes nutriologo={nutriologo}></ComboPacientes>
-                    <button onClick={handlerClick}>Recalcular tablas</button>
-                    <div>
+                    <div className="tarjeta1-tablas">
+                        <ComboPacientes nutriologo={nutriologo}></ComboPacientes>
+                        <button onClick={handlerClick}>Recalcular tablas</button>
+                    </div>       
+                    <div className="tarjeta2-tablas">
                         {
-                            !!length && <TablaEquivalentes equivalentes={equivalentes} kc={kc}/>
+                            !!length && <p>Tabla de Kilocalorías</p>
                         }
-                    </div>
-                    <div>
+                        
                         {
                             !!length && <TablaKC kc={kc}/>
+                        }
+                    </div>
+                    <div className="tarjeta3-tablas">
+                        {
+                            !!length && <p>Tabla de Equivalentes</p>
+                        }
+                        
+                        {
+                            !!length && <TablaEquivalentes equivalentes={equivalentes} kc={kc}/>
                         }
                     </div>
                 </div>

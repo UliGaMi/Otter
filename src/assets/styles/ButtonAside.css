@@ -21,3 +21,21 @@
 {
     background-color: #7AAC51;
 }
+
+@media screen and (max-width:1023px) {
+    
+    .div-buttonaside{
+        height: 90%;
+        width: auto;
+    }
+
+    .button-buttonaside{
+        font-size: 80%;
+    }
+
+    .button-buttonaside img{
+        height: 30%;
+        width: auto;
+    }
+
+}

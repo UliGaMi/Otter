@@ -33,9 +33,17 @@ function FormConfig({ nutriologo }) {
   return (
     <div className="div-formconfig">
       <form ref={form}>
-        <h1>Cambia tu contraseña</h1>
-        <LabelInput name={"contrasenia"} type={"password"} label="Contraseña" id={"password1"}></LabelInput>
-        <LabelInput name={"contrasenia2"} type={"password"} label="Confirma la contraseña" id={"password2"}></LabelInput>
+        <h1>¿Quieres cambiar tu contraseña?</h1>
+        <div className="div-inputacceso">
+          <label htmlFor="contrasenia">Contraseña actual</label>
+          <input type="password" name={"contrasenia"} id={"password1"}/>
+          </div>
+
+          <div className="div-inputacceso">
+          <label htmlFor="contrasenia2"> Nueva contraseña</label>
+          <input type="password" name={"contrasenia2"} id={"password2"}/>
+          </div>
+
         <ButtonForm handler={handlerClick} label={"Cambiar Contraseña"}></ButtonForm>
       </form>
     </div>

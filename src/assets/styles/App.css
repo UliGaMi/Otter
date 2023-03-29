@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+
 html
 {
     background-color: white;
@@ -11,10 +14,20 @@ body
 *
 {
     box-sizing: border-box;
+    font-family: Roboto;
+
 
 }
 
 button:hover
 {
     cursor: pointer;
+}
+
+input{
+    border: 0px solid transparent;
+}
+
+button{
+    border: 0px solid transparent;
 }

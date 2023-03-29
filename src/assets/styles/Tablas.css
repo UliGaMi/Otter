@@ -1,0 +1,117 @@
+.tarjeta1-tablas{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 80%;
+    height: 6%;
+    padding: 2%;
+    
+    background-color: #7aac51;
+    border-radius: 20px;
+}
+
+.tarjeta1-tablas select{
+    color: #121212;
+    background-color: transparent;
+    border: 0px solid transparent;
+    font-size: 1.2rem;
+}
+
+.tarjeta1-tablas button{
+    color: #121212;
+    background-color: #7aac51;
+    font-size: 1.2rem;
+}
+
+.tarjeta2-tablas{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tarjeta3-tablas{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (max-width:1439px) {
+    .tarjeta1-tablas{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        width: 80%;
+        height: 6%;
+        padding: 2%;
+        
+        background-color: #7aac51;
+        border-radius: 20px;
+    }
+    
+    .tarjeta1-tablas select{
+        color: #121212;
+        background-color: transparent;
+        border: 0px solid transparent;
+        font-size: 1.2rem;
+    }
+    
+    .tarjeta1-tablas button{
+        color: #121212;
+        background-color: #7aac51;
+        font-size: 1.2rem;
+    }
+    
+    .tarjeta2-tablas{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .tarjeta3-tablas{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+@media screen and (max-width:800px) {
+    .tarjeta1-tablas{
+
+        justify-content: center;
+        width: 85%;
+        height: 6%;
+        padding: 2%;
+        
+    }
+    
+    .tarjeta1-tablas select{
+        font-size: 0.6rem;
+    }
+    
+    .tarjeta1-tablas button{
+        font-size: 0.8rem;
+        border-radius: 20px;
+    }
+    
+    .tarjeta2-tablas{
+        width: 80%;
+        font-size: 0.8rem;
+    }
+    
+    .tarjeta3-tablas{
+        width: 90%;
+        height: 100%;
+        
+    }
+
+    .tarjeta3-tablas table{
+        font-size: 0.6rem;
+    }
+}

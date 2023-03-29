@@ -4,7 +4,6 @@ import UserContext from "../../contexts/userContext";
 import NutriologoContext from "../../contexts/nutriologoContext";
 import TokenContext from "../../contexts/tokenContext";
 import Logo from "../atoms/Logo";
-import LabelInput from "../atoms/LabelInput";
 import ButtonForm from "../atoms/ButtonForm";
 import "../../assets/styles/Form.css";
 
@@ -43,32 +42,35 @@ function FormLogin() {
   };
 
   return (
+    <div className="div-loginbackground">
     <div className="div-form-main">
       <div className="div-form">
+        <div className="div-imagenacceso">
         <Logo clase={"img-form"}></Logo>
+          <h1>Bienvenido a Otter</h1>
+        </div>
+
         <form ref={form}>
-          <h1>Otter</h1>
-          <LabelInput
-            name={"correo"}
-            type={"email"}
-            label="Correo electrónico"
-            id={"email"}
-          ></LabelInput>
-          <LabelInput
-            name={"contrasenia"}
-            type={"password"}
-            label="Contraseña"
-            id={"password"}
-          ></LabelInput>
+          <div className="div-inputacceso">
+          <label htmlFor="correo">Correo Electrónico</label>
+          <input type="email" name={"correo"} id={"email"}/>
+          </div>
+          <div className="div-inputacceso">
+          <label htmlFor="contrasenia">Contraseña</label>
+          <input type="password" name={"contrasenia"} id={"password"}/>
+          </div>
+          <div className="div-inputbutton">
           <ButtonForm
             handler={handlerClick}
             label={"Iniciar sesión"}
           ></ButtonForm>
+          </div>
         </form>
         <Link className="link-form" to={"/signup"}>
           ¿No tienes cuenta? Registrate aquí
         </Link>
       </div>
+    </div>
     </div>
   );
 }

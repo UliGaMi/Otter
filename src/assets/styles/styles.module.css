@@ -1,0 +1,150 @@
+.firstc {
+    position: absolute;
+    left:10%;
+    top: 20%;
+    min-width: 16%;
+    min-height: 25%;
+    width: 45%;
+    height: 65%;
+    cursor: pointer;
+  }
+  
+  .secondc {
+    position: absolute;
+    right:10%;
+    top:12%;
+    width: 35%;
+    height: 70%;
+    min-width: 15%;
+    min-height: 30%;
+    cursor: pointer;
+  }
+
+  .thirdc {
+    position: absolute;
+    left:50%;
+    top: 48%;
+    width: 35%;
+    height: 45%;
+    min-width: 5%;
+    min-height: 10%;
+  }
+
+  .firstfront,
+  .firstback {
+    background-size: cover;
+  }
+  
+  .firstback {
+    background-image: url(../imgs/1.png);
+  }
+  
+  .firstfront {
+    background-image: url(../imgs/2.png);
+  }
+
+  .secondfront,
+  .secondback {
+    background-size: cover;
+  }
+  
+  .secondback {
+    background-image: url(../imgs/3.png);
+  }
+  
+  .secondfront {
+    background-image: url(../imgs/1.png);
+  }
+
+  .thirdfront,
+  .thirdback {
+    background-size: cover;
+  }
+  
+  .thirdback {
+    background-image: url(../imgs/2.png);
+  }
+  
+  .thirdfront {
+    background-image: url(../imgs/3.png);
+  }
+
+  
+  
+  .container {
+    display: flex;
+    align-items: center;
+    height: 90%;
+    width: 100%;
+    justify-content: center;
+    cursor: pointer;
+    will-change: transform, opacity;
+  }
+
+  @media screen and(max-width:1200px) {
+
+    .firstc {
+      position: absolute;
+      left:10%;
+      top: 23%;
+      width: 36%;
+      height: 25%;
+      cursor: pointer;
+    }
+    
+    .secondc {
+      position: absolute;
+      right:10%;
+      top:12%;
+      width: 35%;
+      height: 30%;
+      min-width: 15%;
+      min-height: 30%;
+      cursor: pointer;
+    }
+  
+    .thirdc {
+      position: absolute;
+      left:50%;
+      top: 48%;
+      width: 25%;
+      height: 20%;
+      min-width: 5%;
+      min-height: 10%;
+    }
+    
+  }
+
+    @media screen and(max-width:800px) {
+
+    .firstc {
+      position: absolute;
+      left:5%;
+      top: 23%;
+      width: 36%;
+      height: 25%;
+      cursor: pointer;
+    }
+    
+    .secondc {
+      position: absolute;
+      right:10%;
+      top:12%;
+      width: 35%;
+      height: 30%;
+      min-width: 15%;
+      min-height: 30%;
+      cursor: pointer;
+    }
+  
+    .thirdc {
+      position: absolute;
+      left:50%;
+      top: 48%;
+      width: 55%;
+      height: 20%;
+      min-width: 5%;
+      min-height: 10%;
+    }
+    
+  }

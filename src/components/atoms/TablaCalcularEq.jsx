@@ -199,7 +199,9 @@ function TablaCalcularEq() {
             });
       }
     return ( 
-        <>
+        
+        <div className="div-calcular-eq">
+          <h1>Tabla de Equivalentes</h1>
         <table>
             <thead>
                 <tr>
@@ -384,9 +386,12 @@ function TablaCalcularEq() {
 
             </tbody>
         </table>
+        
+        <div className="div-boton-calcular-eq">
         <ButtonCancelar></ButtonCancelar>
-        <button onClick={handlerClick}>Guardar tablas</button>
-        </>
+        <button onClick={handlerClick}>Guardar Tablas</button>
+      </div>
+        </div>
      );
 }
 

@@ -1,0 +1,167 @@
+table{
+    background-color: #7aac51;
+    border: #121212 solid 1px;
+    width: 100%;
+    margin: 1%;
+}
+
+td{
+    background-color: #eeecca;
+    border: #121212 solid 1px;
+}
+
+td input{
+width: 100%;
+}
+
+
+.div-calcular-kc{
+    width: 80%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.div-boton-calcular-kc{
+    width: 100%;
+    height: 12%;
+    margin-top: 2%;    
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+}
+.div-boton-calcular-kc button{
+    width: 25%;
+    height: 100%;
+
+    background-color: #7aac51;
+    border-radius: 20px;
+
+    font-size: larger;
+    color: #eeecca;
+}
+
+.div-calcular-eq{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    
+
+}
+
+.div-boton-calcular-eq{
+
+    width: 100%;
+    height: 10%;
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.div-boton-calcular-eq button{
+    width: 25%;
+
+    margin-top: 2%;
+
+    background-color: #7aac51;
+    border-radius: 20px;
+
+    font-size: larger;
+    color: #eeecca;
+}
+
+@media screen and (max-width:800px) {
+    table{
+        background-color: #7aac51;
+        border: #121212 solid 1px;
+        width: 50%;
+        margin: 1%;
+        font-size: 0.7rem;
+    }
+    
+    td{
+        background-color: #eeecca;
+        border: #121212 solid 1px;
+    }
+    
+    td input{
+    width: 100%;
+    }
+    
+    
+    .div-calcular-kc{
+
+        font-size: 0.7rem;
+
+    }
+    
+    .div-boton-calcular-kc{
+
+        font-size: 0.7rem;
+    
+    }
+    .div-boton-calcular-kc button{
+        width: 45%;
+        height: 100%;
+    
+        background-color: #7aac51;
+        border-radius: 20px;
+    
+        font-size: 0.9rem;
+        color: #eeecca;
+    }
+    
+    .div-calcular-eq{
+
+        width: 90%;
+        height: 100%;
+        font-size: 0.7rem;
+    
+    }
+    
+    .div-boton-calcular-eq{
+    
+        width: 100%;
+        height: 10%;
+    
+        display: flex;
+        justify-content: space-between;
+    
+    }
+    
+    .div-boton-calcular-eq button{
+        width: 25%;
+    
+        margin-top: 2%;
+    
+        background-color: #7aac51;
+        border-radius: 20px;
+    
+        font-size: small;
+        color: #eeecca;
+    }
+
+    @media screen and (max-width:800px) {
+    
+
+        
+        .div-page-content{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 90%;
+        }
+    
+    }
+}

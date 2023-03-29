@@ -32,7 +32,8 @@ function TablaCalcularKC({ge, geb, eta, efa, paciente}) {
     
   }
   return (
-    <>
+    <div className="div-calcular-kc">
+      <h1>Tabla de Kilocalorías</h1>
     <table>
       <thead>
         <tr>
@@ -47,7 +48,7 @@ function TablaCalcularKC({ge, geb, eta, efa, paciente}) {
       <tbody>
         <tr>
           <td>HCO</td>
-          <td>{ge}</td>
+          <td>{ge.toFixed(2)}</td>
           <td>
             <input type="number" placeholder="0" onChange={handlerChange1} />
           </td>
@@ -57,7 +58,7 @@ function TablaCalcularKC({ge, geb, eta, efa, paciente}) {
         </tr>
         <tr>
           <td>PROT</td>
-          <td>{ge}</td>
+          <td>{ge.toFixed(2)}</td>
           <td>
             <input type="number" placeholder="0" onChange={handlerChange2} />
           </td>
@@ -67,7 +68,7 @@ function TablaCalcularKC({ge, geb, eta, efa, paciente}) {
         </tr>
         <tr>
           <td>LIP</td>
-          <td>{ge}</td>
+          <td>{ge.toFixed(2)}</td>
           <td>
             <input type="number" placeholder="0" onChange={handlerChange3} />
           </td>
@@ -77,9 +78,11 @@ function TablaCalcularKC({ge, geb, eta, efa, paciente}) {
         </tr>
       </tbody>
     </table>
+      <div className="div-boton-calcular-kc">
         <ButtonCancelar></ButtonCancelar>
         <button onClick={handlerClick}>Continuar</button>
-    </>
+      </div>
+    </div>
   );
 }
 

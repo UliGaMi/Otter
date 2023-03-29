@@ -37,21 +37,26 @@ function FormPaciente({nutriologo}) {
       <div className="div-formpaciente">
             <form ref={form}>
             <h1 className='formHeader'>Registrar Paciente</h1>
+            <div className='div-formpaciente-nombre'>
             <LabelInput name={"nombre"} type={"text"} label="Nombre completo" id={"name"}></LabelInput>
-            <div className='div-smallInputsContainer'>
-            <div className='form-first-smallInputs'>
-            <LabelInput name={"nacimiento"} type={"date"} label="Fecha de nacimiento" id={"birthday"}></LabelInput>
             </div>
-            <div className='form-second-smallInputs'>
-            <LabelInput name={"altura"} type={"number"} label="Altura" id={"height"}></LabelInput>
-            <label>Género</label>
+            <div className='div-formpaciente-datospaciente'>
+
+            <LabelInput name={"nacimiento"} type={"date"} label="Fecha de nacimiento" id={"birthday"}></LabelInput>
+
+            <div className='div-formpaciente-select'>
+            <label>Sexo</label>
             <select name="sexo">
                 <option value="M">Masculino</option>
                 <option value="F">Femenino</option>
             </select>
             </div>
+            <LabelInput name={"altura"} type={"number"} label="Altura" id={"height"}></LabelInput>
+            
             </div>
+            <div className='div-botonpaciente'>
             <ButtonForm handler={handlerClick} label="Registrar paciente" ></ButtonForm>
+            </div>
             </form>
         </div>
      );

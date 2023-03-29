@@ -34,20 +34,36 @@ function FormSignup() {
       });
   }
   return (
+    <div className="div-registerbackground">
+
     <div className="div-form-main-register">
       <div className="div-form">
+      <div className="div-imagenacceso">
         <Logo clase={"img-form"}></Logo>
-        <form ref={form}>
           <h1>Bienvenido a Otter</h1>
-          <LabelInput name={"nombre"} type={"text"} label="Nombre completo" id={"name"}></LabelInput>
-          <LabelInput name={"correo"} type={"email"} label="Correo electrónico" id={"email"}></LabelInput>
-          <LabelInput name={"contrasenia"} type={"password"} label="Contraseña" id={"password"}></LabelInput>
+        </div>
+        <form ref={form}>
+          <div className="div-inputacceso">
+          <label htmlFor="nombre">Nombre completo</label>
+          <input type="text" name={"nombre"} id={"name"}/>
+          </div>
+          <div className="div-inputacceso">
+          <label htmlFor="correo">Correo Electrónico</label>
+          <input type="email" name={"correo"} id={"email"}/>
+          </div>
+          <div className="div-inputacceso">
+          <label htmlFor="contrasenia">Contraseña</label>
+          <input type="password" name={"contrasenia"} id={"password"}/>
+          </div>
+          <div className="div-inputbutton">
           <ButtonForm handler={handlerClick} label={"Regístrate"}></ButtonForm>
+          </div>
         </form>
         <Link className="link-form" to={"/login"}>
           ¿Ya tienes cuenta? Inicia sesión aquí
         </Link>
       </div>
+    </div>
     </div>
   );
 }

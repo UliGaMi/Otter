@@ -1,16 +1,85 @@
 .tarjeta1-historialpaciente, .tarjeta2-historialpaciente{
-    display: flex;
-    flex-direction: column;
+    
     width: 45%;
     height: 45%;
-    background-color: #7AAC51;
+    background-color: #EEECCA;
+    margin: 2%;
+    border-radius: 20px;
+}
+.subtarjeta1-historialpaciente{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+}
+
+.subtarjeta1-historialpaciente, .subtarjeta2-historialpaciente{
+    width: 97%;
+    height: 100%;
+    background-color: #7aac51;
+    border-radius: 20px;
+    
+    
+}
+.subtarjeta1-historialpaciente form{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.subtarjeta1-historialpaciente select{
+    width: 90%;
+    height: 100%;
+    background-color: #121212;
+    color: #EEECCA;
+    border-radius: 20px;
+    font-size: 1.4rem;
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;    
+}
+
+.subtarjeta2-historialpaciente{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding: 3%;
+    text-align: center;
 }
 
 .tarjeta3-historialpaciente{
-    width: 90%;
-    height: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 96%;
+    height: 40%;
+    border-radius: 20px;
     background-color: #EEECCA;
+    margin: 2%;
 }
 
+.tarjeta3-historialpaciente h1{
+    font-size: 2rem;
+    margin: 1.3%;
+}
 
+@media screen and (max-width:780px) {
 
+    .tarjeta1-historialpaciente, .tarjeta2-historialpaciente{
+    
+        width: 96%;
+        height: 40vh;
+        background-color: #EEECCA;
+        margin: 2%;
+        border-radius: 20px;
+    }
+
+    .tarjeta3-historialpaciente{
+        margin: 2%;
+        border-bottom: transparent solid 16px;
+        height: 40vh;
+    }
+    
+}

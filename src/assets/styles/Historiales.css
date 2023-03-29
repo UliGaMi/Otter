@@ -1,12 +1,67 @@
 .div-historiales{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 98%;
+    height: 90%;
+    background-color: #EEECCA;
+    border-radius: 20px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.div-historiales::-webkit-scrollbar {
+    width: 20px;
+}
+
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+    
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #7aac51;
+    border-radius: 10px;
 }
 
 .div-historiales-historial{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
+    height: 100%;
+
 }
 
+.div-historiales-historial div{
+
+    height: 100%;
+
+}
+
+.div-historiales-historial button{
+    
+    align-self: flex-end;
+    background-color: transparent;
+    border: 0px solid transparent;
+    font-size: 2.2rem;
+
+}
+
+.div-historiales-historial p{
+    
+    font-size: 0.8rem;
+
+}
+
+@media screen and (max-width:1440px) {
+    .div-historiales-historial button{
+
+        font-size: 1.8rem;
+    
+    }
+    
+    .div-historiales-historial p{
+        
+        font-size: 0.6rem;
+    
+    }
+    
+}

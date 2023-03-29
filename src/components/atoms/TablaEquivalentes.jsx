@@ -1,3 +1,5 @@
+import "../../assets/styles/TablaEquivalentes.css";
+
 function TablaEquivalentes({equivalentes, kc}) {
     return ( 
         <table>

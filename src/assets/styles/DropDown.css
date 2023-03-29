@@ -2,8 +2,6 @@
 {
     flex-direction: column;
     justify-content: space-evenly;
-    width: 15vw;
-    height: 20vh;
     background-color: #EEECCA;
     position: absolute;
     right: 0%;
@@ -33,6 +31,6 @@
 
 .ul-dropdown li :hover{
 
-    border: 2px green;
     background-color: #84B053;
+    width: 100%;
 }
